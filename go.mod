@@ -1,4 +1,4 @@
-module github.com/p9dev/log
+module github.com/p9ds/log
 
 go 1.21.4
 
