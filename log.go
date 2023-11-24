@@ -51,27 +51,27 @@ var (
 	// LvlStr is a map that provides the uniform width strings that are printed
 	// to identify the Level of a log entry.
 	LvlStr = LevelMap{
-		Off:   "off  ",
-		Fatal: "fatal",
-		Error: "error",
-		Warn:  "warn ",
-		Info:  "info ",
-		Check: "check",
-		Debug: "debug",
-		Trace: "trace",
+		Off:   "off",
+		Fatal: "ftl",
+		Error: "err",
+		Warn:  "wrn",
+		Info:  "inf",
+		Check: "chk",
+		Debug: "dbg",
+		Trace: "trc",
 	}
 	// log is your generic Logger creation invocation that uses the version data
 	// in version.go that provides the current compilation path prefix for making
 	// relative paths for log printing code locations.
 	lvlStrs = map[string]Level{
-		"off":   Off,
-		"fatal": Fatal,
-		"error": Error,
-		"check": Check,
-		"warn":  Warn,
-		"info":  Info,
-		"debug": Debug,
-		"trace": Trace,
+		"off": Off,
+		"ftl": Fatal,
+		"err": Error,
+		"chk": Check,
+		"wrn": Warn,
+		"inf": Info,
+		"dbg": Debug,
+		"trc": Trace,
 	}
 	timeStampFormat           = "2006-01-02T15:04:05.000000000Z07:00"
 	tty             io.Writer = os.Stderr
@@ -279,7 +279,7 @@ func logPrint(
 		timeText := getTimeText(timeStampFormat)
 		var loc string
 		loc = GetLoc(3)
-		formatString := "%s %s %s %s %s"
+		formatString := "%s [%s] %s %s %s"
 		var app string
 		if len(App.Load()) > 0 {
 			app = App.Load()

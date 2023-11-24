@@ -7,7 +7,8 @@ import (
 )
 
 var (
-	log = l.GetLogger()
+	log   = l.GetLogger()
+	fails = log.E.Chk
 )
 
 func TestGetLogger(t *testing.T) {
@@ -19,7 +20,7 @@ func TestGetLogger(t *testing.T) {
 	log.W.Ln("testing log level", l.LvlStr[l.Warn])
 	log.E.Ln("testing log level", l.LvlStr[l.Error])
 	log.F.Ln("testing log level", l.LvlStr[l.Fatal])
-	log.E.Chk(errors.New("dummy error as error"))
+	fails(errors.New("dummy error as error"))
 	log.I.Chk(errors.New("dummy information check"))
 	log.I.Chk(nil)
 
