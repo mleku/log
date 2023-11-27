@@ -2,7 +2,7 @@ package log_test
 
 import (
 	"errors"
-	l "github.com/p9ds/log"
+	l "github.com/mleku/log"
 	"testing"
 )
 

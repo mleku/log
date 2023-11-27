@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gookit/color"
-	"go.uber.org/atomic"
+	"github.com/mleku/atomic"
 	"io"
 	"os"
 	"runtime"

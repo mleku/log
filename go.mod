@@ -1,11 +1,11 @@
-module github.com/p9ds/log
+module github.com/mleku/log
 
 go 1.21.4
 
 require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/gookit/color v1.5.4
-	go.uber.org/atomic v1.11.0
+	github.com/mleku/atomic v1.11.2
 )
 
 require (
